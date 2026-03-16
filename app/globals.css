@@ -1,0 +1,211 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-manrope);
+  --font-inter: var(--font-inter), 'Inter', sans-serif;
+  --font-micro5: var(--font-micro-5), 'Micro 5', sans-serif;
+  --color-primary-dark: #3b3f6f;
+  --color-brand-blue: #000bff;
+  --color-admin-card: #6168ff;
+}
+
+@layer utilities {
+  .bg-brand-gradient {
+    background: linear-gradient(to bottom left, #000bff, #ffffff);
+  }
+
+  .bg-login-left {
+    background: linear-gradient(
+      145deg,
+      #000bff 6.17%,
+      #2a2eb8 45.62%,
+      #696cb1 93.83%
+    );
+  }
+
+  .bg-login-right {
+    background: linear-gradient(
+      145deg,
+      #f5f6ff 6.17%,
+      #eceeff 50%,
+      #f0f2ff 93.83%
+    );
+  }
+
+  .admin-card {
+    background-color: var(--color-admin-card);
+    @apply rounded-4xl p-8 md:p-10 shadow-2xl h-fit text-white;
+  }
+}
+
+.admin-login-input.ant-input,
+.admin-login-input.ant-input-affix-wrapper {
+  height: 56px !important;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.admin-login-input.ant-input-affix-wrapper {
+  padding: 4px 16px !important;
+}
+
+.admin-login-input.ant-input-affix-wrapper .ant-input {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.admin-login-input.ant-input,
+.admin-login-input.ant-input-affix-wrapper .ant-input,
+.admin-login-input.ant-input::placeholder,
+.admin-login-input.ant-input-affix-wrapper .ant-input::placeholder {
+  color: #94a3b8 !important;
+}
+
+.admin-login-input.ant-input-affix-wrapper .ant-input-suffix {
+  color: #94a3b8 !important;
+}
+
+.admin-login-input.ant-input:hover,
+.admin-login-input.ant-input-affix-wrapper:hover {
+  border-color: #cbd5e1 !important;
+}
+
+.admin-login-input.ant-input:focus,
+.admin-login-input.ant-input-focused,
+.admin-login-input.ant-input-affix-wrapper-focused {
+  border-color: #3b3f6f !important;
+  box-shadow: 0 0 0 2px rgba(59, 63, 111, 0.15) !important;
+}
+
+.login-input.ant-input,
+.login-input .ant-select-selector,
+.login-input.ant-input-affix-wrapper {
+  @apply rounded-xl! border! border-gray-200! shadow-sm! bg-white!;
+  height: 52px !important;
+  display: flex;
+  align-items: center;
+}
+
+.login-input.ant-input-affix-wrapper {
+  padding: 4px 16px !important;
+}
+
+.login-input.ant-input-affix-wrapper .ant-input {
+  @apply shadow-none! border-none! rounded-none! h-full! bg-transparent!;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.login-input:hover,
+.login-input.ant-input-affix-wrapper:hover {
+  @apply border-[#696CB1]!;
+}
+.login-input:focus,
+.login-input-focused,
+.login-input.ant-input-affix-wrapper-focused {
+  @apply border-[#000BFF]! shadow-[0_0_0_2px_rgba(0,11,255,0.1)]!;
+}
+
+.login-input.ant-input,
+.login-input .ant-select-selector,
+.login-input.ant-input-affix-wrapper {
+  @apply rounded-lg! border-none! shadow-md!;
+  height: 46px !important;
+  display: flex;
+  align-items: center;
+}
+
+.login-input.ant-input-affix-wrapper {
+  padding: 4px 11px !important;
+}
+
+.login-input.ant-input-affix-wrapper .ant-input {
+  @apply shadow-none! border-none! rounded-none! h-full!;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.custom-admin-table .ant-table {
+  background: transparent !important;
+}
+
+.custom-admin-table .ant-table-thead > tr > th {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+  padding-bottom: 20px !important;
+  font-size: 1.1rem !important;
+  background: transparent !important;
+  color: white !important;
+}
+
+.custom-admin-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  color: white !important;
+}
+
+.custom-admin-table .ant-table-tbody > tr.ant-table-row:hover > td,
+.custom-admin-table .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.custom-admin-table .ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.custom-admin-table .ant-empty-description {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.custom-admin-table .ant-checkbox-inner {
+  background-color: white !important;
+  border-color: white !important;
+}
+.custom-admin-table .ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: var(--color-admin-card) !important;
+}
+
+.custom-pagination-white .ant-pagination-item {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+.custom-pagination-white .ant-pagination-item a {
+  color: white !important;
+}
+.custom-pagination-white .ant-pagination-item-active {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: transparent !important;
+}
+.custom-pagination-white .ant-pagination-prev .ant-pagination-item-link,
+.custom-pagination-white .ant-pagination-next .ant-pagination-item-link {
+  color: white !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.forgot-password-modal .ant-modal-content {
+  padding: 26px 24px 22px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 35px 80px rgba(15, 23, 42, 0.32) !important;
+}
+
+.upload-wrapper .ant-upload-drag {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 2px dashed rgba(255, 255, 255, 0.4) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s ease;
+}
+.upload-wrapper .ant-upload-drag:hover {
+  border-color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+.upload-wrapper .ant-upload-list-item,
+.upload-wrapper .ant-upload-list-item-name {
+  color: white !important;
+}
